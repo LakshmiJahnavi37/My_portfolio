@@ -1,0 +1,142 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Projects | Lakshmi Jahnavi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .duration {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>My Projects</header>
+
+<div class="container">
+
+    
+    <div class="project-card">
+        <h3>Cloud Application Deployment</h3>
+        <p class="company">SprintM Technologies</p>
+        <p class="duration">November 2025 – December 2025</p>
+        <ul>
+            <li>Assisted in deploying cloud-based applications using AWS services.</li>
+            <li>Gained hands-on exposure to real-world cloud infrastructure and deployment workflows.</li>
+        </ul>
+    </div>
+
+    
+    <div class="project-card">
+        <h3>Deployment of a Static Website Using Amazon S3</h3>
+        <p class="company">
+            SprintM Technologies · 
+            <a href="https://github.com/Lakshmijahnavi37/static-website-amazon-s3" target="_blank">
+                GitHub Repository
+            </a>
+        </p>
+        <p class="duration">October 2025 – November 2025</p>
+        <ul>
+            <li>Developed a static website using HTML and CSS and deployed it on Amazon S3.</li>
+            <li>Configured bucket permissions and enabled public access for website hosting.</li>
+        </ul>
+    </div>
+
+    
+    <div class="project-card">
+        <h3>Online Feedback Collector System</h3>
+        <p class="company">
+            Self Project · 
+            <a href="https://github.com/Lakshmijahnavi37/online-feedback-collector" target="_blank">
+                GitHub Repository
+            </a>
+        </p>
+        <p class="duration">August 2025 – September 2025</p>
+        <ul>
+            <li>Built a Flask-based web application for collecting and managing user feedback.</li>
+            <li>Implemented role-based access so only authorized users (HOD/admin) can view feedback.</li>
+        </ul>
+    </div>
+
+    <a href="{{ url_for('home') }}">← Back to Portfolio</a>
+
+
+</div>
+
+</body>
+</html>

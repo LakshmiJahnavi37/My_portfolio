@@ -1,0 +1,285 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio - Lakshmi Jahnavi</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf5);
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+nav {
+    background: #ffffff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* Sections (Cards) */
+.section {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Profile Image */
+.profile-image {
+    display: block;
+    margin: 20px auto;
+    width: 220px;
+    height: 220px;              /* equal width & height */
+    border-radius: 50%;
+    object-fit: cover;          /* prevents compression */
+    border: 5px solid #667eea;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+/* Skills */
+ol li {
+    padding: 8px;
+    font-size: 17px;
+}
+
+/* Links */
+.section a {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+form table {
+    width: 100%;
+}
+
+form input {
+    padding: 10px;
+    width: 95%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 6px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Button */
+form button {
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+} 
+
+form button:hover {
+    transform: scale(1.05);
+}
+/* Align radio & checkbox neatly */
+.option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>Welcome to My Portfolio</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="{{ url_for('projects') }}">Projects</a>
+
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    
+    <div class="section" id="about">
+        <h2>Lakshmi Jahnavi Vuddagiri</h2>
+        <img src="{{ url_for('static', filename='jahnavi.jpg') }}" class="profile-image" alt="My Photo">
+
+        <p>Hello! I am <strong>Lakshmi Jahnavi Vuddagiri</strong>.</p>
+        <p>I completed my 10th with <strong>97%</strong> and Intermediate with <strong>98.6%</strong>.</p>
+        <p>I am currently in my <b>2nd year B.Tech</b> at <em>Aditya University</em>.</p>
+        <p>I have hands-on experience in web development using <b>HTML and CSS</b>.</p>
+
+       <p>
+    You can <strong>
+        <a href="{{ url_for('static', filename='html.png') }}" target="_blank">
+            click here
+        </a>
+    </strong> to check what I know about HTML and CSS.
+</p>
+
+    </div>
+
+    
+    <div class="section" id="skills">
+        <h2>My Skills</h2>
+        <ol>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Express.js</li>
+            <li>React.JS</li>
+            <li>Node.JS</li>
+            <li>Java</li>
+            
+        </ol>
+    </div>
+
+   
+    <div class="section" id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to get in touch through this form:</p>
+
+        <form action="/submit" method="POST">
+    <table>
+        <tr>
+            <td><label>Name:</label></td>
+            <td>
+                <input type="text" name="name" placeholder="Enter your name">
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Email:</label></td>
+            <td>
+                <input type="email" name="email" placeholder="Enter your email">
+            </td>
+        </tr>
+
+                <tr>
+                    <td><b>Gender:</b></td>
+                    <td>
+                       <label class="option">
+    <input type="radio" name="gender" value="Male"> Male
+</label>
+
+<label class="option">
+    <input type="radio" name="gender" value="Female"> Female
+</label>
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Interests:</b></td>
+                    <td>
+                        <label class="option">
+    <input type="checkbox" name="interests" value="Coding"> Coding
+</label>
+
+<label class="option">
+    <input type="checkbox" name="interests" value="Reading"> Reading
+</label>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Bio:</label></td>
+                    <td>
+                        <input type="text" name="bio" maxlength="200" placeholder="Write your bio">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
