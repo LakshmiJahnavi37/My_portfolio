@@ -32,7 +32,7 @@ def home():
 @app.route("/projects")
 def projects():
     return render_template("projects.html")
-
+#This is a 
 @app.route("/submit", methods=["POST"])
 def submit():
     name = request.form.get("name")
